@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>mc.euro</groupId>
-  <artifactId>bi-parent</artifactId>
-  <version>parent</version>
-  <packaging>pom</packaging>
-  <name>BI Parent POM</name>
-  <modules>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>mc.euro</groupId>
+    <artifactId>BukkitInterface-Parent</artifactId>
+    <version>parent</version>
+    <packaging>pom</packaging>
+    <name>BukkitInterface-Parent</name>
+    <modules>
         <module>modules/api</module>
         <module>modules/v1_7_9</module>
         <module>modules/v1_7_10</module>
@@ -39,37 +39,16 @@
         </repository>
     </repositories>
     <build>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh</artifactId>
-                <version>2.4</version>
-            </extension>
-        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.7</version>
-                <configuration>
-                    <skip>false</skip>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.8.0</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-      <repository>
-        <id>rainbowcraft-repo</id>
-        <url>scp://rainbowcraft.sytes.net/var/www/maven/repository</url>
-      </repository>
-    </distributionManagement>
 </project>
