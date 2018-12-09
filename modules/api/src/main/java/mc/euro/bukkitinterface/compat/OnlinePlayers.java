@@ -1,4 +1,4 @@
-package mc.euro.bukkit.compat;
+package mc.euro.bukkitinterface.compat;
 
 import java.util.Collection;
 import org.bukkit.entity.Player;

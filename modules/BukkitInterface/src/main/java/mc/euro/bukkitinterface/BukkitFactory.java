@@ -1,8 +1,8 @@
-package mc.euro.bukkit;
+package mc.euro.bukkitinterface;
 
-import mc.euro.bukkit.compat.OnlinePlayers;
-import mc.euro.bukkit.compat.v1_7_10.OnlinePlayersCollection;
-import mc.euro.bukkit.compat.v1_7_9.OnlinePlayersArray;
+import mc.euro.bukkitinterface.compat.OnlinePlayers;
+import mc.euro.bukkitinterface.compat.v1_7_10.OnlinePlayersCollection;
+import mc.euro.bukkitinterface.compat.v1_7_9.OnlinePlayersArray;
 import mc.euro.version.Version;
 import mc.euro.version.VersionFactory;
 

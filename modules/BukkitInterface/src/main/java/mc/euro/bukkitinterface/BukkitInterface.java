@@ -1,7 +1,7 @@
-package mc.euro.bukkit;
+package mc.euro.bukkitinterface;
 
 import java.util.Collection;
-import mc.euro.bukkit.compat.OnlinePlayers;
+import mc.euro.bukkitinterface.compat.OnlinePlayers;
 
 import org.bukkit.entity.Player;
 
