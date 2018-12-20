@@ -2,12 +2,6 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>mc.euro</groupId>
-        <artifactId>BukkitInterface-Parent</artifactId>
-        <version>parent</version>
-        <relativePath>../../</relativePath>
-    </parent>
     <groupId>mc.euro</groupId>
     <artifactId>BukkitInterface</artifactId>
     <version>4.0.1</version>
@@ -23,12 +17,12 @@
             <url>http://rainbowcraft.sytes.net/maven/repository/</url>
         </repository>
         <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public</url>
+            <id>spigot-public</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/public/</url>
         </repository>
         <repository>
-            <id>md_5-snapshots</id>
-            <url>http://repo.md-5.net/content/repositories/snapshots/</url>
+            <id>bukkit-public</id>
+            <url>https://repo.md-5.net/content/repositories/public/</url>
         </repository>
         <repository>
             <id>sk89q-repo</id>
@@ -36,11 +30,11 @@
         </repository>
         <repository>
             <id>vault-repo</id>
-            <url>http://nexus.theyeticave.net/content/repositories/pub_releases</url>
+            <url>http://nexus.hc.to/content/repositories/pub_releases/</url>
         </repository>
         <repository>
-            <id>kitteh-repo</id>
-            <url>http://repo.kitteh.org/content/repositories/public/</url>
+            <id>dmulloy2-repo</id>
+            <url>http://repo.dmulloy2.net/nexus/repository/public/</url>
         </repository>
     </repositories>
     <dependencies>
@@ -56,6 +50,7 @@
             <version>4.0.1</version>
             <type>jar</type>
             <scope>compile</scope>
+            <optional>false</optional>
         </dependency>
         <dependency>
             <groupId>mc.euro</groupId>
@@ -63,6 +58,7 @@
             <version>parent</version>
             <type>jar</type>
             <scope>compile</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>mc.euro</groupId>
@@ -70,6 +66,7 @@
             <version>parent</version>
             <type>jar</type>
             <scope>compile</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>mc.euro</groupId>
@@ -77,11 +74,12 @@
             <version>parent</version>
             <type>jar</type>
             <scope>compile</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
     <build>
         <finalName>BukkitInterface</finalName>
-        <directory>../../target</directory>
+        <directory>./target</directory>
         <sourceDirectory>./src/main/java</sourceDirectory>
         <extensions>
             <extension>
@@ -91,16 +89,6 @@
             </extension>
         </extensions>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <archive>
-                        <addMavenDescriptor>true</addMavenDescriptor>
-                    </archive>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -193,6 +181,7 @@
                             </relocations>
                             <artifactSet>
                                 <includes>
+                                    <include>mc.euro:Version</include>
                                     <include>mc.euro:BukkitInterface</include>
                                 </includes>
                             </artifactSet>
